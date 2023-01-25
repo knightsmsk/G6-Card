@@ -1,0 +1,299 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter';
+}
+
+:root{
+    --page-color: #F3F3F6;
+
+    --bg-img-color: #F6F6F6;
+    --new-color: #D13333;
+    --highlight: #50A1EC;
+    --icon-color: #B3B3B3;
+
+    --midnight: #2B3039;
+    --gold: #E9DCCE;
+    --silver: #DFE0E1;
+    --space-gray: #7A797C;
+    --starlight: #E4E0D9;
+    --light-blue: #90ADBD;
+    --light-pink: #E4D3D0;
+    --purple: #B9B8CF;
+    --blue: #617598;
+    --pink: #C1596A;
+    --yellow: #E7D358;
+    --green: #274750;
+
+    /************************************ SIZE *************************************/
+    --gap-content: 18px;
+
+}
+
+body{
+    background-color: var(--page-color);
+}
+
+.container{
+    max-width: 1728px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.container-grid{
+    display:grid;
+    grid-template-columns: repeat(4,350px);
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    margin: 20px 0;
+}
+
+.card{
+    max-width: 365px;
+    width: 100%;
+    height: 446px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 15px;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 2px 4px 12px rgba(0, 0, 0, 0.08);
+    transition: transform .2s ease;
+    cursor: pointer;
+}
+
+.card:hover{
+    transform: scale(1.05);
+    transition: transform .2s ease;
+}
+
+.product-img{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    border-radius: 5px;
+    padding: 2.25rem;
+    background-color: var(--bg-img-color);
+}
+
+.product-img img{
+    height: 182px;
+}
+
+.product-img .icon-like{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 18px;
+    right: 20px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: white;
+    box-shadow: 0 1px 0.5rem rgba(0, 0, 0, 0.13);
+}
+
+.product-img .icon-like ion-icon{
+    color: var(--icon-color);
+    font-size: 18px;
+}
+
+.product-content{
+    margin: 20px 0;
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap-content);
+}
+
+.product-info{
+    display: flex;
+    justify-content: space-between;
+}
+
+.product-info h1{
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.product-info #new{
+    font-weight: 600;
+    font-size: 12px;
+    color: var(--new-color);
+    margin-left: 5px;
+}
+
+.detail{
+    width: fit-content;
+    display: inline;
+}
+
+.product-describe{
+    display: block;
+    height: 40px;
+    overflow: hidden;
+}
+
+.product-describe p{
+    display:inline;
+    font-size: 14px;
+}
+
+.product-describe a{
+    font-size: 14px;
+    text-decoration: none;
+    color: var(--highlight);
+}
+
+.color-addCart{
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+ul.color{
+    display: flex;
+    list-style: none;
+    gap: 8px;
+}
+
+ul.color li div{
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    cursor: pointer;
+    border: none;
+    transition: .2s ease;
+}
+
+ul.color li div:hover{
+    border: solid 2px var(--highlight);
+    transition: .2s ease;
+}
+
+ul.color .silver{
+    background-color: var(--silver);
+}
+
+ul.color .space-gray{
+    background-color: var(--space-gray);
+}
+
+ul.color .starlight{
+    background-color: var(--starlight);
+}
+
+ul.color .light-blue{
+    background-color: var(--light-blue);
+}
+
+ul.color .light-pink{
+    background-color: var(--light-pink);
+}
+
+ul.color .purple{
+    background-color: var(--purple);
+}
+
+ul.color .blue{
+    background-color: var(--blue);
+}
+
+ul.color .pink{
+    background-color: var(--pink);
+}
+
+ul.color .yellow{
+    background-color: var(--yellow);
+}
+
+ul.color .midnight{
+    background-color: var(--midnight);
+}
+
+ul.color .gold{
+    background-color: var(--gold);
+}
+
+ul.color .green{
+    background-color: var(--green);
+}
+
+.color-addCart button{
+    border: 2px solid black;
+    background-color: transparent;
+    border-radius: 25px;
+    padding: 8px;
+    font-weight: 600;
+    transition: .2s ease;
+}
+
+.color-addCart button:hover{
+    border: 2px solid var(--highlight);
+    background-color: var(--highlight);
+    color: white;
+    transition: .2s ease;
+    cursor: pointer;
+}
+
+/*********************************************** iMAC ***********************************************/
+
+
+@media screen and (max-width: 2048px) {
+    .container-grid{
+        grid-template-columns: repeat(5,350px);
+    }
+}
+
+/*********************************************** Dell Latitude - Macbook air ***********************************************/
+
+@media screen and (max-width: 1440px) {
+    .container{
+        padding: 0 20px;
+    }
+    .container-flex{
+        grid-template-columns: repeat(4,1fr);
+    }
+}
+
+/*********************************************** Galaxy Fold 2 - iPad Mini ***********************************************/
+
+@media screen and (max-width: 884px) {
+    .container-grid{
+        grid-template-columns: repeat(2,350px);
+    }
+}
+
+
+@media screen and (max-width: 428px){
+    .container-grid{
+        grid-template-columns: 1fr;
+        justify-items: center;
+    }
+}
+
+@media screen and (max-width: 390px){
+
+    .product-img.mac img{
+        width: 200px;
+    }
+}
+
+@media screen and (max-width: 320px){
+    :root{
+        --gap-content: 10px;
+    }
+
+    .product-img img{
+        width: 150px;
+    }
+
+    .product-img.mac img{
+        width: 185px;
+    }
+}
