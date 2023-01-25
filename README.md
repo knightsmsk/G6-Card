@@ -1,8 +1,8 @@
 # G6-Card
 InClass Assignment DesignRS
 
-# Wireframe
-(./asset/wireframe.png)
+# Wire frame
+![wire frame](./asset/wireframe.png)
 
 # Membership
 - นางสาว กรณ์ศศิร์ เศษสรรพ์ 6309681564
