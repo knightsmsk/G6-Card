@@ -2,7 +2,7 @@
 InClass Assignment DesignRS
 
 # Wire frame
-![wire frame](./asset/wireframe.png)
+![wire frame](./assets/wireframe.png)
 
 # Membership
 - นางสาว กรณ์ศศิร์ เศษสรรพ์ 6309681564
